@@ -73,6 +73,7 @@ jobs:
                ## Propuesta de solución (pasos concretos)
                ## Riesgos y consideraciones
                ## Información faltante (preguntas al autor si el issue es ambiguo)
+            FORMATO: todo lo que escribas en el diagnóstico (que se publicará como comentario del issue) debe estar en Markdown válido que GitHub renderice correctamente (GitHub Flavored Markdown): encabezados con `##`, listas con `-` o `1.`, código en línea con backticks, bloques de código con triple backtick y lenguaje (```js), tablas con `|` si ayudan, y referencias a código como `archivo:línea`. No uses HTML ni formatos que GitHub no entienda.
             No modifiques ningún archivo del repositorio ni publiques comentarios; solo escribe el archivo de diagnóstico.
 
       - name: Publicar o actualizar comentario de diagnóstico
