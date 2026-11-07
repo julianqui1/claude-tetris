@@ -24,7 +24,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       ISSUE_NUMBER: ${{ github.event.issue.number }}
-      DIAGNOSIS_FILE: ${{ runner.temp }}/diagnosis.md
+      DIAGNOSIS_FILE: .claude-triage/diagnosis.md
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -65,7 +65,7 @@ jobs:
                - 1 o más de área: "area: gameplay", "area: rendering", "area: controles", "area: ui", "area: scoring"
                - opcionalmente "good first issue"
                Si el evento es "edited", quita con `--remove-label` los labels de tipo/prioridad/área que ya no apliquen. No toques otros labels puestos por personas.
-            4. Escribe el diagnóstico en español, en formato Markdown, en el archivo `${{ runner.temp }}/diagnosis.md` con estas secciones:
+            4. Escribe el diagnóstico en español, en formato Markdown, en el archivo `.claude-triage/diagnosis.md` (ruta relativa a la raíz del repositorio; crea la carpeta si no existe) con estas secciones:
                ## Resumen
                ## Clasificación (tipo / prioridad / área, con justificación breve)
                ## Análisis (causa probable o alcance del cambio)
